@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 Your Name
+ * Copyright (c) 2024 Ephren Manning
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -17,11 +17,22 @@ module tt_um_example (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  assign uio_out = 0;
-  assign uio_oe  = 0;
+  assign uo_out[7:2]  = 6'd0;  // Example: ou_out is the sum of ui_in and uio_in
+  assign uio_out{[7:4], [2:1]} = 6'd0;
+  assign uio_oe  = 8'b00001001;
 
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
+
+  top #() top_instance (
+    .clk(clk),
+    .rst_btn(rst_n),
+    .s_data(uio_in[1]), //input
+    .comparison_value(ui_in[7:0]),
+    .s_clk(uio_out[3]), //output
+    .cs(uio_out[0]), //output
+    .green_led(uo_out[0]),
+    .red_led(uo_out[1])
+  );
 
 endmodule
