@@ -26,18 +26,18 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "Comparison Value Bit 0"
+  ui[1]: "Comparison Value Bit 1"
+  ui[2]: "Comparison Value Bit 2"
+  ui[3]: "Comparison Value Bit 3"
+  ui[4]: "Comparison Value Bit 4"
+  ui[5]: "Comparison Value Bit 5"
+  ui[6]: "Comparison Value Bit 6"
+  ui[7]: "Comparison Value Bit 7"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
+  uo[0]: "Green Led"
+  uo[1]: "Red Led"
   uo[2]: ""
   uo[3]: ""
   uo[4]: ""
@@ -46,10 +46,10 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
+  uio[0]: "Chip Select"
+  uio[1]: "Serial Data"
   uio[2]: ""
-  uio[3]: ""
+  uio[3]: "Serial Clock"
   uio[4]: ""
   uio[5]: ""
   uio[6]: ""
