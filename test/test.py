@@ -34,7 +34,7 @@ async def test_project(dut):
 
     dut._log.info("Test project behavior")
 
-    for i in 255:
+    for i in range(255):
         dut.ui_in.value = i
         await ClockCycles(dut.clk, 1)
 
