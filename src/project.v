@@ -17,7 +17,7 @@ module tt_um_ephrenm_tsal (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out[7:2]  = 6'd0;  // Example: ou_out is the sum of ui_in and uio_in
+  assign uo_out[7:2]  = 6'd0; 
   assign uio_out[7:4] = 4'd0;
   assign uio_out[2:1] = 2'd0;
   assign uio_oe  = 8'b00001001;
