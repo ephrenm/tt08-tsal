@@ -17,7 +17,10 @@ module top (
     assign rst = ~rst_btn;
  
     reg [7:0]   in;
-    assign in = comparison_value;
+
+    always @ (posedge clk) begin
+        in <= comparison_value;
+    end
 
     adc_controller #(
         .clk_speed(8000000),
