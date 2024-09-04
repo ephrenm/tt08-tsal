@@ -47,6 +47,8 @@ EV.5.9.4 When the voltage outside the Accumulator Container(s) is below T.9.1.1,
 
 When testing, the digital line driving the green LED should be driven high only in the case that converted analog value is less than the comparison value. When the converted value is greater than or equal to the comparison value, the red LED should blink at a rate of 4 hertz. This requires that simulations be ran for upwards of a second to confirm LED blink speed.
 
+All testbenches are written in Verilog as opposed to TinyTapeout's CocoTB test setup. Testbench files can be found in the "Verilog Testbench" folder in "test"
+
 ## External hardware
 
 A PMOD AD1 from Digilent was used to test this project. The input/outputs on the TinyTapeout Demo board were configured so that this PMOD could be used on the top *(confirm) bidirectional port. Should a custom board be made to support functionality, the Analog Devices AD7476A or compatible 12-bit ADC converter will need to be used.
